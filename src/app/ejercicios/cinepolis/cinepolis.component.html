@@ -1,0 +1,51 @@
+<div class="container">
+    <div style="text-align: center;" id="tittle">
+      <h2>Cinepolis</h2>
+    </div>
+    <form (ngSubmit)="calcularDescuentos()">
+      <section id="section1">
+        
+            <mat-form-field class="example-full-width">
+                <mat-label>Nombre</mat-label>
+                <input [(ngModel)]="Nombre" matInput placeholder="Nombre" name="Nombre" required>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Cantidad de Compradores</mat-label>
+                <input [(ngModel)]="CantidadC" matInput type="number" placeholder="Cantidad Compradores" name="cantidadC" required>
+            </mat-form-field>
+
+          <div class="form-group">
+            <label for="tarjeta">Tarjeta Cineco</label>
+            <br>
+            <mat-radio-group [(ngModel)]="Tarjeta" aria-label="Select an option" name="Tarjeta">
+                <mat-radio-button  value="S" name="Tarjeta" >SI</mat-radio-button>
+                <mat-radio-button  value="N" name="Tarjeta" >NO</mat-radio-button>
+            </mat-radio-group>
+            
+          </div>
+          <mat-form-field class="example-full-width">
+            <mat-label>Cantidad de Entradas</mat-label>
+            <input [(ngModel)]="CantidadEnt" matInput type="number" placeholder="Cantidad Entradas" name="cantidadEnt" required>
+          </mat-form-field>
+        
+      </section>
+      <section id="section2">
+        <div class="control-group">
+          <div class="form-group">
+            <label for="total">Total</label>
+            <p class="form-control-static"><b>{{Total}}</b></p>
+          </div>
+        </div>
+      </section>
+      <section id="section3">
+        <h4>Acciones</h4>
+        <div class="controls">
+          <button type="submit" mat-flat-button color="primary">Procesar</button>
+          <button type="reset" mat-flat-button color="warn">Salir</button>
+          
+        </div>
+      </section>
+    </form>
+  </div>
+  

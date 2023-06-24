@@ -1,0 +1,46 @@
+
+
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-header">
+                <h3>Distancia entres dos puntos</h3>
+            </div>
+            <div class="card-body">
+                <form class="distanciaPuntos">
+                    <br>
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Punto x1</mat-label>
+                      <input [(ngModel)]="x1" matInput placeholder="Punto x1" name="x1">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Punto y1</mat-label>
+                        <input [(ngModel)]="y1"  matInput placeholder="Punto y1" name="y1">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Punto x2</mat-label>
+                        <input [(ngModel)]="x2"  matInput placeholder="Punto x2" name="x2">
+                    </mat-form-field>
+                      <br>
+                    <mat-form-field class="example-full-width">
+                          <mat-label>Punto y2</mat-label>
+                          <input [(ngModel)]="y2"  matInput placeholder="Punto y2" name="y2">
+                    </mat-form-field>
+                    <br>
+                      <button (click)="calcularDistancia()" mat-flat-button color="warn">Calcular</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-4">
+    </div>
+    <div class="col-6">
+        <h2>Resultado: {{distancia}}</h2>
+    </div>
+</div>
+
