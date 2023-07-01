@@ -10,7 +10,7 @@ class Config {
     '6': '#0000FF',
     '7': '#EE82EE',
     '8': '#808080',
-    '9': '#FFFFFF'
+    '9': '#FFFFFF',
   };
 
   static TOLERANCE_COLORS: { [key: string]: string } =  {
@@ -59,8 +59,7 @@ export class ResistenciaComponent {
 
   calcular() {
     this.hexaBanda1 = this.getHexaColor(this.colorBanda1);
-    console.log(this.hexaBanda1);
-    console.log(this.colorBanda1);
+    
     this.hexaBanda2 = this.getHexaColor(this.colorBanda2);
     this.hexaMultip = this.getHexaMultiplierColor(this.colorMultiplicador);
     this.hexaTolerancia = this.getHexaToleranceColor(this.colorTolerancia);

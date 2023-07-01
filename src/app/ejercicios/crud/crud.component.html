@@ -1,0 +1,51 @@
+<h1>Hola Grupo de IRD</h1><br><br>
+
+<div class="card">
+  <div class="card-header">
+    Lista Alumnos
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-2">Filtrar Por:</div>
+        <div class="col-md-4">
+          <!---Enlace de datos bidereccional-->
+          <input [(ngModel)]="listFilter" class="form-control" type="text">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Filtro:{{listFilter}}</h3>
+        </div>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-striped" *ngIf="alumnos.length">
+          <thead>
+            <tr>
+              <th><button (click)="showImagen()" class="btn btn-primary">Mostrar Imagen</button></th>
+              <th>Matricula</th>
+              <th>Nombre</th>
+              <th>Edad</th>
+              <th>Correo</th>
+              <th>Pago</th>
+              <th>Calificacion</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let alumno of alumnos ">
+              <td></td>
+              <td>{{alumno.matriucula}}</td>
+              <td>{{alumno.nombre | uppercase}}</td>
+              <td>{{alumno.edad}}</td>
+              <td>{{alumno.correo}}</td>
+              <td>{{alumno.pago | currency}}</td>
+              <td>9</td>
+              <!--<td><img *ngIf="muestraImagen" [src]="alumno.foto" 
+                        [title]="alumno.nombre"
+                        [style.margin.px]="imagenMargin"
+                        [style.width.px]="wihtImagen"></td> -->
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>
