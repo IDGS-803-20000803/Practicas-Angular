@@ -12,6 +12,7 @@ import { MenuComponent } from './ejercicios/menu/menu.component';
 import { AlumnosFilterPipe } from './ejercicios/alumnos-filter.pipe';
 import { AlumnoReactiveComponent } from './ejercicios/alumno-reactive/alumno-reactive.component';
 import { AppRoutingModule } from './app.routing.module';
+import { PizzaModule } from './ejercicios/pizza/pizza.module';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { AppRoutingModule } from './app.routing.module';
     CineModule,
     ResisModule,
     FormsModule,
+    PizzaModule,
     ReactiveFormsModule,
     AppRoutingModule
   ],
